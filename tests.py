@@ -20,9 +20,11 @@ class TestGoogleCalc(unittest.TestCase):
 
     def test_google_calc_addition_with_mock(self):
 
-        google_calc_addition = mock.Mock(return_value='1 + 1 = 2')
+        google_calc_addition_one = mock.Mock(return_value='1 + 1 = 2')
+        google_calc_addition_two = mock.Mock(return_value='1 + 2 = 3')
 
-        self.assertEqual(google_calc_addition(1, 1), '1 + 1 = 2')
+        self.assertEqual(google_calc_addition_one(1, 1), '1 + 1 = 2')
+        self.assertEqual(google_calc_addition_two(1, 2), '1 + 2 = 3')
 
 
 if __name__ == '__main__':
